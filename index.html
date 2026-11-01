@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+<script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'fjajkdmhhi',
+    });
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1924980096050806"
+     crossorigin="anonymous"></script>
+<title>Yuji B. Tsuta — Portfolio</title>
+<style>
+:root{--bg:#f4f4f3;--panel:#ffffff;--card:#ffffff;--line:#dcdcda;--text:#2a2a2a;--mute:#6a6a68;--accent:#d9480f;--accent2:#c2410c;--radius:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15}
+a{color:var(--accent2)}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+
+/* top bar + menu */
+header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:12px 20px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#menuBtn{width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;display:grid;place-items:center}
+#menuBtn:hover{border-color:var(--accent)}
+#menuBtn span,#menuBtn span:before,#menuBtn span:after{display:block;width:20px;height:2px;background:currentColor;border-radius:2px;position:relative}
+#menuBtn span:before,#menuBtn span:after{content:"";position:absolute;left:0}
+#menuBtn span:before{top:-6px}#menuBtn span:after{top:6px}
+.brand{font-family:Georgia,serif;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.hpic{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex:none}
+.npic{width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);display:block;margin-bottom:10px}
+.brand small{display:block;font:12px system-ui;color:var(--mute)}
+nav{position:fixed;inset:0 auto 0 0;width:min(320px,86vw);background:var(--panel);border-right:1px solid var(--line);z-index:40;padding:24px 18px;transform:translateX(-100%);transition:transform .25s;display:flex;flex-direction:column;gap:6px}
+nav.open{transform:none}
+nav .who{padding:6px 10px 18px;border-bottom:1px solid var(--line);margin-bottom:10px}
+nav .who b{font:600 1.3rem Georgia,serif;display:block}
+nav .who span{color:var(--mute);font-size:.9rem}
+nav a{display:block;padding:12px 14px;border-radius:10px;color:var(--text);text-decoration:none}
+nav a:hover{background:var(--card)}
+nav a.active{background:var(--accent);color:#fff}
+#scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:30;opacity:0;pointer-events:none;transition:opacity .25s}
+#scrim.on{opacity:1;pointer-events:auto}
+
+main{max-width:1200px;margin:0 auto;padding:36px 20px 80px}
+.view{display:none}.view.on{display:block}
+.lead{color:var(--mute);max-width:60ch;margin:10px 0 28px}
+h1{font-size:clamp(2rem,5vw,3.2rem)}
+h2{font-size:1.8rem;margin-bottom:18px}
+.notice{background:#fff1e8;border:1px solid var(--accent);color:var(--text);padding:10px 14px;border-radius:10px;margin-bottom:22px;font-size:.9rem}
+
+/* gallery */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;cursor:pointer;text-align:left;color:inherit;padding:0;font:inherit;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.08)}
+.card{box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#ffe8d9,#ececea);position:relative;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.thumb .ph{position:absolute;inset:0;display:grid;place-items:center;font:700 3rem Georgia,serif;color:var(--accent)}
+.card .meta{padding:14px 16px 16px}
+.card h3{font-size:1.15rem;margin-bottom:4px}
+.card p{color:var(--mute);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tag{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--accent2);border:1px solid var(--line);border-radius:99px;padding:2px 10px}
+
+/* modal */
+#modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:18px;background:rgba(0,0,0,.7)}
+#modal.on{display:grid}
+.sheet{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);max-width:760px;width:100%;max-height:92vh;overflow:auto}
+.sheet .thumb{aspect-ratio:16/9}
+.sheet .body{padding:22px}
+.sheet .body p{margin:10px 0 18px;white-space:pre-line}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;border:0;font:600 .95rem system-ui;cursor:pointer;margin:0 8px 8px 0}
+.btn.alt{background:transparent;border:1px solid var(--accent);color:var(--accent2)}
+.btn:hover{filter:brightness(1.1)}
+
+.loc{color:var(--mute);font-size:.82rem;margin-top:8px}
+.sheet .loc{margin:-8px 0 16px}
+.avatar{float:right;width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 0 12px 18px;border:3px solid var(--accent)}
+.profile::after{content:"";display:block;clear:both}
+.ref h3{font-size:1.1rem}
+.ref .when{color:var(--accent2);font-size:.9rem;margin:2px 0 0}
+/* info views */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:16px}
+.job h3{font-size:1.2rem}
+.job .when{color:var(--accent2);font-size:.9rem;margin:2px 0 8px}
+.job ul{padding-left:20px;color:var(--text)}
+.job li{margin:6px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--card);border:1px solid var(--line);padding:5px 14px;border-radius:99px;font-size:.9rem}
+dl{display:grid;grid-template-columns:110px 1fr;gap:10px 16px}
+dt{color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <button id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  <div class="brand" id="brandName"></div>
+</header>
+<div id="scrim"></div>
+<nav id="nav" aria-label="Main"></nav>
+
+<main>
+  <section class="view" id="v-projects">
+    <h1>My Projects</h1>
+    <p class="lead" id="tagline"></p>
+    <div id="notice"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="view" id="v-profile"><h2>Profile</h2><div id="profileBody"></div></section>
+  <section class="view" id="v-experience"><h2>Experience</h2><div id="expBody"></div></section>
+  <section class="view" id="v-skills"><h2>Skills &amp; tools</h2><div class="panel"><div class="chips" id="skillBody"></div></div></section>
+  <section class="view" id="v-contact"><h2>Contact</h2><div class="panel"><dl id="contactBody"></dl></div></section>
+  <section class="view" id="v-references"><h2>References</h2><div id="refBody"></div></section>
+</main>
+
+<div id="modal" role="dialog" aria-modal="true"><div class="sheet" id="sheet"></div></div>
+
+<script>
+/* =========== EDIT THIS PART =========== */
+// 1) Your Google Sheet. Share it as "Anyone with the link → Viewer".
+//    Everything on this site is read from it, one tab per section. The site looks for:
+//      Projects            Name | Details | Link | Attached File | Category | Location | Last Update
+//      Personal Info       Field | Value   (name, role, location, summary, skills, email, phone, ...)
+//      Work Experience     Title | Company | Period
+//      Experience Details  Company | Detail   (one bullet per row)
+//      References          Name | Position | Phone
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/1AlAIjS16BA45K2aggp0xgnsqAFVH30YEkeCmgE09kzQ/edit?usp=drivesdk";
+const TABS = {projects:"Projects", personal:"Personal Info", work:"Work Experience", details:"Experience Details", refs:"References"};
+const SHOW_REFERENCE_CONTACTS = false; // true = also show reference phone numbers / emails publicly
+
+// 2) Saved info, used only for anything the sheet cannot provide
+const ME = {
+  name: "Yuji B. Tsuta",
+  role: "Graphics Specialist & AutoCAD Drafter",
+  location: "Metro Manila, Philippines",
+  tagline: "Graphic design, technical drafting and digital products. Tap a project to see the details.",
+  about: "Technical and detail-oriented Computer Engineering professional with practical experience in IT support, database development, and technical CAD drafting. Adept at troubleshooting complex systems, maintaining IT infrastructure, and using data-driven solutions to optimize business workflows.\n\nCommitted to continuous learning and applying core engineering principles to build reliable, scalable technology solutions. Based in Metro Manila, I also sell kids' printable activity workbooks online.",
+  experience: [
+    {title: "Graphics Specialist", org: "Integreon Managed Solutions Manila", when: "2025 – Present", points: [
+      "Produce, re-create, edit, format and lay out high-quality business presentations.",
+      "Ensure absolute adherence to global client brand identity guidelines, including typography, color palettes, spacing and templates.",
+      "Coordinate with Queue/Workflow Coordinators to manage task priority; split and consolidate large-scale presentation projects with team members to meet tight shift deadlines.",
+      "Maintain clear, professional communication on project clarifications while upholding data privacy and security protocols for sensitive corporate information."
+    ]},
+    {title: "AutoCAD Drafter", org: "Wilchat Marketing", when: "2024 – 2025", points: [
+      "Interior Designer: 3D and 360° walkthroughs showing wall and ceiling panels.",
+      "Graphic Designer: company ID and uniform, brochures, fliers.",
+      "Social Media Manager: managed posting for the Facebook page, TikTok and YouTube accounts.",
+      "Video Editor: filmed and edited before-and-after renovation videos.",
+      "Content Creator: showcased finished products.",
+      "App Developer: online wall and ceiling panel swatches and textures."
+    ]},
+    {title: "Graphics Designer Intern", org: "Universidad de Manila", when: "2020 – 2021", points: [
+      "Created posters, certificates and labels for the university.",
+      "Created the program invitation for the 2020 – 2021 graduates."
+    ]}
+  ],
+  skills: ["Graphic Design", "Presentation Design", "Brand Guideline Compliance", "AutoCAD", "3D & 360° Interior Design", "Video Editing", "Social Media Management", "Content Creation", "App Development", "IT Support", "Database Development", "Troubleshooting & IT Infrastructure"],
+  contacts: {Email: "yujitsuta20@gmail.com", Phone: "+63 962 251 7473", Location: "Metro Manila, Philippines", LinkedIn: "https://linkedin.com/in/yujitsuta", Website: "https://yujitsuta.netlify.app", Shop: "https://raket.ph"}
+};
+/* ====================================== */
+
+// Saved copy of your sheet, used only if the live sheet can't be reached
+const SNAPSHOT = [{"name": "Reception – Design 1: Mahogany Wood", "details": "Reception area concept finished in mahogany wood. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GTB20B3P/show", "file": "", "category": "Interior – Commercial"}, {"name": "Reception – Design 2: Mahogany Wood with Gold", "details": "Reception area concept in mahogany wood with gold accents. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GTKWFX2O/show", "file": "", "category": "Interior – Commercial"}, {"name": "Reception – Design 3: Gray Wood Combination", "details": "Reception area concept using a combination of gray wood finishes. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GTKQO2VB/show", "file": "", "category": "Interior – Commercial"}, {"name": "Reception – Design 4: Gray Wood and Black Marble Column", "details": "Gray wood paneling with a black marble column and a gold-frame aluminum ceiling. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GTKRKHXP/show", "file": "", "category": "Interior – Commercial"}, {"name": "Reception – Design 5: Brown Metallic Wall", "details": "Brown metallic wall with a light pattern, black marble column and black-frame aluminum ceiling. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GVDPCYBF/show", "file": "", "category": "Interior – Commercial"}, {"name": "Reception – Design 6: Gray Metallic Wall", "details": "Gray metallic wall with a light pattern, black marble column and black-frame aluminum ceiling. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GV9G35GT/show", "file": "", "category": "Interior – Commercial"}, {"name": "Wilchat Showroom (Banawe) – Ground Floor Walkthrough", "details": "Walkthrough of the ground floor showroom. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3LMEQKVWP/show", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – Ground Floor Office, Design 1", "details": "Ground floor office design. Panoramic render.", "link": "https://www.kujiale.com/xiaoguotu/pano/3FOIIUEG2DWL", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – Ground Floor Reception, Design 2", "details": "Ground floor reception design. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIIHSQF1JQ?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – 2nd Floor Bedroom, Room 1", "details": "Second floor bedroom, Room 1. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIGFC0D183?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – 2nd Floor Bedroom, Room 2 (Design 3)", "details": "Second floor bedroom, Room 2, using Design 3. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIINU4H0K4?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – 2nd Floor Bedroom, Room 3 (Design 2)", "details": "Second floor bedroom, Room 3, using Design 2. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIIOO3C9NR?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – 2nd Floor Bedroom, Room 4 (Design 2)", "details": "Second floor bedroom, Room 4, using Design 2. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIINPSUXDO?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – 2nd Floor Hallway (Design 2)", "details": "Second floor hallway using Design 2. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIINYOG89O?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Wilchat Showroom (Banawe) – 2nd Floor Balcony (Design 1)", "details": "Second floor balcony using Design 1. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIFJP9IUUC?type=2", "file": "", "category": "Interior – Showroom"}, {"name": "Pampanga Police Office – Design 1", "details": "Office interior concept with carbon board panels, bamboo grilles and aluminum trims. Includes a materials take-off (carbon board, bamboo grilles, aluminum profiles, strip light, power supply, silicone). Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIHR3QOL3F?type=2", "file": "", "category": "Interior – Government Office"}, {"name": "Pampanga Police Office – Design 2", "details": "Second office interior option. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIHSKU68UP?type=2", "file": "", "category": "Interior – Government Office"}, {"name": "Pampanga Police Office – Design 3", "details": "Third office interior option. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIHSQN0WB1?type=2", "file": "", "category": "Interior – Government Office"}, {"name": "Chiz Project – Living Room", "details": "Living room with a bamboo fiber panel ceiling and bed background treatment. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIIUVI6RN1?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Chiz Project – Kitchen", "details": "Kitchen interior render for the Chiz project. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIIUVQ6OLQ?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Chiz Project – Comfort Room", "details": "Comfort room (CR) render for the Chiz project. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIIUU5NJAL?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 4th Floor Bedroom, Design 1", "details": "4th Floor Bedroom, Design 1 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIWFLMQ17M?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 4th Floor Bedroom, Design 2", "details": "4th Floor Bedroom, Design 2 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIFNBX0PYX?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 4th Floor CR", "details": "4th Floor CR of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIW2BH9F2A?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom A, Design 1", "details": "3rd Floor Bedroom A, Design 1 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIW5R7PUII?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom A, Design 2", "details": "3rd Floor Bedroom A, Design 2 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOILWU2KNYQ?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom A, Design 3", "details": "3rd Floor Bedroom A, Design 3 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIFKTJJTSH?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom A CR", "details": "3rd Floor Bedroom A CR of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIW8MR8OY3?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom B, Design 1", "details": "3rd Floor Bedroom B, Design 1 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIW8F5YELX?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom B, Design 2", "details": "3rd Floor Bedroom B, Design 2 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIM9VAIWA0?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom B, Design 3", "details": "3rd Floor Bedroom B, Design 3 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIFLXWN71Q?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 3rd Floor Bedroom B CR", "details": "3rd Floor Bedroom B CR of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIW7MKHR5S?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 2nd Floor Bedroom, Design 1", "details": "2nd Floor Bedroom, Design 1 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIWDFM0509?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 2nd Floor Bedroom, Design 2", "details": "2nd Floor Bedroom, Design 2 of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOIFO1JWWT4?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – 2nd Floor CR", "details": "2nd Floor CR of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOISDB4K3Y3?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – Ground Floor Kitchen", "details": "Ground Floor Kitchen of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOISESHQK70?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – Ground Floor Maid Room", "details": "Ground Floor Maid Room of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOISEM6WIMG?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Casiana Residences Unit 35A – Ground Floor CR", "details": "Ground Floor CR of Unit 35A in Casiana Residences. Rendered image.", "link": "https://www.kujiale.com/pub/tool/render/image/display/3FOISER5L1JD?type=2", "file": "", "category": "Interior – Residential"}, {"name": "Your Home Showroom – Full Showroom", "details": "Showroom layout and interior. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3LRKM6FFB/show", "file": "", "category": "Interior – Showroom"}, {"name": "Infinity Square – Room 201: Flat Ceiling / Wall Board", "details": "Room 201 with a flat ceiling and wall board finish. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GOP7LXX0/show", "file": "", "category": "Interior – Commercial"}, {"name": "Infinity Square – Room 202: COB Ceiling / Wall Board", "details": "Room 202 with a COB-lit ceiling and wall board finish. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3GQSSBLC9/show", "file": "", "category": "Interior – Commercial"}, {"name": "Kaking Home Depot – Flat Ceiling", "details": "Flat ceiling design option. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3LEY711ED/show", "file": "", "category": "Interior – Retail"}, {"name": "Kaking Home Depot – COB Ceiling", "details": "COB-lit ceiling design option. Interactive 3D design.", "link": "https://yun.kujiale.com/design/3FO3LQUFYR9F/show", "file": "", "category": "Interior – Retail"}];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test((u||"").trim()) ? u.trim() : "";
+let projects = [];
+
+/* ---- menu ---- */
+const BASE_VIEWS = [["projects","Projects"],["profile","Profile"],["experience","Experience"],["skills","Skills & tools"],["contact","Contact"]];
+let VIEWS = BASE_VIEWS.slice();
+function buildHeader(){
+  const pic = imgUrl(ME.photo), face = (cls) => pic ? '<img class="' + cls + '" src="' + esc(pic) + '" alt="" referrerpolicy="no-referrer" onerror="this.remove()">' : "";
+  $("#brandName").innerHTML = face("hpic") + "<div>" + esc(ME.name) + "<small>" + esc(ME.role) + "</small></div>";
+  $("#tagline").textContent = ME.tagline;
+  $("#nav").innerHTML = '<div class="who">' + face("npic") + '<b>' + esc(ME.name) + '</b><span>' + esc(ME.role) + '</span></div>' +
+    VIEWS.map(v => '<a href="#' + v[0] + '" data-v="' + v[0] + '">' + v[1] + '</a>').join("");
+  document.title = ME.name + " — Portfolio";
+}
+buildHeader();
+function menu(open){ $("#nav").classList.toggle("open",open); $("#scrim").classList.toggle("on",open); $("#menuBtn").setAttribute("aria-expanded",open); }
+$("#menuBtn").onclick = () => menu(!$("#nav").classList.contains("open"));
+$("#scrim").onclick = () => menu(false);
+document.addEventListener("keydown", e => { if(e.key==="Escape"){ menu(false); closeModal(); } });
+
+function route(){
+  const id = (location.hash.slice(1) || "projects");
+  const v = VIEWS.some(x => x[0]===id) ? id : "projects";
+  document.querySelectorAll(".view").forEach(el => el.classList.toggle("on", el.id==="v-"+v));
+  document.querySelectorAll("nav a").forEach(a => a.classList.toggle("active", a.dataset.v===v));
+  menu(false); window.scrollTo(0,0);
+}
+addEventListener("hashchange", route);
+
+/* ---- info pages ---- */
+let REFS = [];
+const norm = s => String(s == null ? "" : s).toLowerCase().replace(/[^a-z0-9]/g, "");
+const findCol = (head, ...names) => head.findIndex(h => names.some(n => norm(h).includes(n)));
+function linkify(v){
+  v = String(v == null ? "" : v).trim();
+  if(/^https?:\/\//i.test(v)) return '<a href="' + esc(v) + '" target="_blank" rel="noopener">' + esc(v) + '</a>';
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return '<a href="mailto:' + esc(v) + '">' + esc(v) + '</a>';
+  if(/^\+?[\d\s().-]{7,}$/.test(v)) return '<a href="tel:' + esc(v.replace(/[^\d+]/g, "")) + '">' + esc(v) + '</a>';
+  if(/^(www\.)?[\w-]+(\.[\w-]+)+(\/\S*)?$/i.test(v)) return '<a href="https://' + esc(v) + '" target="_blank" rel="noopener">' + esc(v) + '</a>';
+  return esc(v);
+}
+function imgUrl(u){
+  u = String(u || "").trim();
+  const m = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/);
+  return m ? "https://drive.google.com/thumbnail?id=" + m[1] + "&sz=w600" : safeUrl(u);
+}
+function renderInfo(){
+  const photo = imgUrl(ME.photo);
+  $("#profileBody").innerHTML = '<div class="panel profile">' + (photo ? '<img class="avatar" src="' + esc(photo) + '" alt="Photo of ' + esc(ME.name) + '" referrerpolicy="no-referrer" onerror="this.remove()">' : "") + '<p style="white-space:pre-line">' + esc(ME.about) + '</p></div>';
+  $("#expBody").innerHTML = ME.experience.length ? ME.experience.map(j =>
+    '<div class="panel job"><h3>' + esc(j.title) + (j.org ? ' — ' + esc(j.org) : "") + '</h3>' +
+    (j.when ? '<div class="when">' + esc(j.when) + '</div>' : "") +
+    ((j.points || []).length ? '<ul>' + j.points.map(x => '<li>' + esc(x) + '</li>').join("") + '</ul>' : "") + '</div>').join("") : '<p class="lead">No experience listed yet.</p>';
+  $("#skillBody").innerHTML = ME.skills.map(x => "<span>" + esc(x) + "</span>").join("");
+  $("#contactBody").innerHTML = Object.entries(ME.contacts).map(([k,v]) => "<dt>" + esc(k) + "</dt><dd>" + linkify(v) + "</dd>").join("");
+  $("#refBody").innerHTML = REFS.map(r => '<div class="panel ref"><h3>' + esc(r.name) + '</h3>' + (r.role ? '<div class="when">' + esc(r.role) + '</div>' : "") + (SHOW_REFERENCE_CONTACTS && r.contact ? '<p>' + linkify(r.contact) + '</p>' : "") + '</div>').join("");
+}
+
+/* ---- Google Sheet ---- */
+const SHEET_ID = (SHEET_URL.match(/\/d\/([\w-]+)/) || [])[1];
+function parseCSV(t){
+  const rows=[]; let r=[], c="", q=false;
+  for(let i=0;i<t.length;i++){
+    const ch=t[i];
+    if(q){ if(ch=='"'){ if(t[i+1]=='"'){c+='"';i++;} else q=false; } else c+=ch; }
+    else if(ch=='"') q=true;
+    else if(ch==","){ r.push(c); c=""; }
+    else if(ch=="\n"||ch=="\r"){ if(ch=="\r"&&t[i+1]=="\n") i++; r.push(c); c=""; rows.push(r); r=[]; }
+    else c+=ch;
+  }
+  if(c||r.length){ r.push(c); rows.push(r); }
+  return rows;
+}
+let jsonpN = 0;
+function viaJsonp(url){
+  return new Promise((ok,no) => {
+    const cb = "__gv" + (++jsonpN), sc = document.createElement("script"), t = setTimeout(() => no(), 10000);
+    const cell = c => c ? String(c.f != null ? c.f : (c.v != null ? c.v : "")) : "";
+    window[cb] = j => { clearTimeout(t); try{
+      ok({head: j.table.cols.map(c => c.label || ""), data: j.table.rows.map(r => r.c.map(cell))});
+    }catch(e){ no(e); } };
+    sc.onerror = () => no(); sc.src = url + "&tqx=responseHandler:" + cb; document.head.appendChild(sc);
+  });
+}
+async function getTable(tab){
+  if(!SHEET_ID) return null;
+  const base = "https://docs.google.com/spreadsheets/d/" + SHEET_ID + "/gviz/tq?headers=1&sheet=" + encodeURIComponent(tab);
+  try{
+    const res = await fetch(base + "&tqx=out:csv"); if(!res.ok) throw 0;
+    const all = parseCSV(await res.text()).filter(r => r.some(x => x.trim()));
+    if(!all.length) throw 0;
+    return {head: all[0], data: all.slice(1)};
+  }catch(e){}
+  try{
+    const t = await viaJsonp(base);
+    if(t.head.some(Boolean) || t.data.length) return t;
+  }catch(e){}
+  return null;
+}
+
+function toProjects(t){
+  const h = t.head, c = (...n) => findCol(h, ...n);
+  const iN=c("name","title","project"), iD=c("detail","description"), iL=c("link","url"), iF=c("file","attach"), iC=c("categ","type"), iP=c("location","place"), iU=c("update","date");
+  const g = (r,i) => i < 0 ? "" : String(r[i] || "").trim();
+  return t.data.map(r => ({name:g(r,iN), details:g(r,iD), link:g(r,iL), file:g(r,iF), category:g(r,iC), place:g(r,iP), updated:g(r,iU)})).filter(p => p.name);
+}
+
+const KEYMAP = {
+  name:["name","fullname"],
+  role:["role","title","position","jobtitle","headline","profession"],
+  location:["location","address","city","base"],
+  tagline:["tagline","subtitle","intro","slogan"],
+  about:["about","aboutme","summary","professionalsummary","bio","profile","description"],
+  skills:["skills","skill","tools","skillstools","skillsandtools","expertise"],
+  photo:["photo","image","picture","photourl","avatar","pic","profilepic","profilepicture","profilephoto","profileimage","headshot","photolink","imageurl","imagelink","picurl"]
+};
+function keyOf(k){ const n = norm(k); for(const f in KEYMAP) if(KEYMAP[f].includes(n)) return f; return null; }
+function parsePersonal(t){
+  const out = {contacts:{}, skills:[]};
+  const h = t.head.map(norm);
+  const keyHead = /^(field|key|label|info|item|attribute|property)$/;
+  const valHead = /^(value|values|detail|details|info|data|content|answer|description)$/;
+  let pairs;
+  if(t.head.length === 2 || (t.head.length > 2 && keyHead.test(h[0]) && t.data.length > 1)){
+    const rows = t.data.slice();
+    if(!keyHead.test(h[0]) && !valHead.test(h[1])) rows.unshift(t.head);
+    pairs = rows.map(r => [r[0], r[1]]);
+  } else {
+    const r0 = t.data[0] || [];
+    pairs = t.head.map((k,i) => [k, r0[i]]);
+  }
+  pairs.forEach(([k,v]) => {
+    k = String(k || "").trim(); v = String(v || "").trim();
+    if(!k || !v) return;
+    const f = keyOf(k);
+    if(f === "skills") out.skills.push(...v.split(/[,;\n•|]+/).map(x => x.trim()).filter(Boolean));
+    else if(f === "about") out.about = out.about ? out.about + "\n\n" + v : v;
+    else if(f){ out[f] = v; if(f === "location") out.contacts[k] = v; }
+    else out.contacts[k] = v;
+  });
+  return out;
+}
+function applyPersonal(p){
+  ["name","role","location","tagline","about","photo"].forEach(k => { if(p[k]) ME[k] = p[k]; });
+  if(p.skills.length) ME.skills = p.skills;
+  if(Object.keys(p.contacts).length) ME.contacts = p.contacts;
+}
+
+function parseWork(t){
+  const h = t.head, c = (...n) => findCol(h, ...n);
+  const iId = h.findIndex(x => /^(id|jobid|no|ref|key)$/.test(norm(x)));
+  const iT=h.findIndex((x,i) => i !== iId && ["title","position","role","job"].some(n => norm(x).includes(n))), iO=c("company","organization","organisation","employer"), iW=c("period","dates","date","year","when","duration","tenure");
+  const iS=c("start","from"), iE=h.findIndex(x => /^(end|enddate|until|to)$/.test(norm(x))), iD=c("description","summary","responsib");
+  const g = (r,i) => i < 0 ? "" : String(r[i] || "").trim();
+  return t.data.map(r => ({
+    id: g(r,iId), title: g(r,iT), org: g(r,iO),
+    when: g(r,iW) || [g(r,iS), g(r,iE)].filter(Boolean).join(" – "),
+    points: g(r,iD).split(/\n|•/).map(x => x.trim()).filter(Boolean)
+  })).filter(j => j.title || j.org);
+}
+function findJob(jobs, k){
+  const n = norm(k); if(!n) return null;
+  return jobs.find(j => j.id && norm(j.id) === n) ||
+    jobs.find(j => [j.org, j.title, j.title + j.org, j.org + j.title].some(x => { const m = norm(x); return m && (m === n || (n.length >= 4 && (m.includes(n) || n.includes(m)))); }));
+}
+function attachDetails(jobs, t){
+  if(!t || !jobs.length) return;
+  const h = t.head, hn = h.map(norm);
+  const iB = findCol(h, "detail","description","responsib","point","bullet","task","achiev","dut","text","activit","accomplish");
+  if(iB < 0){
+    // wide layout: one column per job, one bullet per cell
+    h.forEach((k,j) => { const job = findJob(jobs, k); if(job) t.data.forEach(r => { const b = String(r[j] || "").trim(); if(b) job.points.push(b); }); });
+    return;
+  }
+  const iId = hn.findIndex((x,i) => i !== iB && /^(id|jobid|ref|key|no)$/.test(x));
+  const iK = iId >= 0 ? iId : hn.findIndex((x,i) => i !== iB && ["company","organization","organisation","employer","job","position","title","role"].some(n => x.includes(n)));
+  let last = "";
+  t.data.forEach(r => {
+    const own = iK >= 0 ? String(r[iK] || "").trim() : "";
+    if(own) last = own;
+    const b = String(r[iB] || "").trim(); if(!b) return;
+    const job = findJob(jobs, own || last) || (jobs.length === 1 ? jobs[0] : null);
+    if(job) job.points.push(b);
+  });
+}
+
+function parseRefs(t){
+  const h = t.head, c = (...n) => findCol(h, ...n);
+  let iN = c("name"); if(iN < 0) iN = 0;
+  const iR = c("position","role","designation","job","relationship","title"), iC = c("phone","contact","mobile","number","email");
+  const g = (r,i) => i < 0 ? "" : String(r[i] || "").trim();
+  return t.data.map(r => ({name:g(r,iN), role:g(r,iR), contact:g(r,iC)})).filter(x => x.name);
+}
+
+async function loadAll(){
+  const names = ["projects","personal","work","details","refs"], T = {};
+  try{
+    const res = await Promise.all(names.map(n => getTable(TABS[n])));
+    names.forEach((n,i) => T[n] = res[i]);
+  }catch(e){}
+  const failed = [];
+  let rows = T.projects ? toProjects(T.projects) : [];
+  if(!rows.length){ rows = SNAPSHOT; failed.push(TABS.projects); }
+  if(T.personal){
+    const p = parsePersonal(T.personal);
+    if(p.name || p.about || p.skills.length || Object.keys(p.contacts).length) applyPersonal(p); else failed.push(TABS.personal);
+  } else failed.push(TABS.personal);
+  const jobs = T.work ? parseWork(T.work) : [];
+  if(jobs.length){ attachDetails(jobs, T.details); ME.experience = jobs; if(!T.details) failed.push(TABS.details); }
+  else failed.push(TABS.work);
+  if(T.refs) REFS = parseRefs(T.refs); else failed.push(TABS.refs);
+  VIEWS = BASE_VIEWS.slice();
+  if(REFS.length) VIEWS.push(["references","References"]);
+  const note = failed.length ? "Couldn't load these tabs from your Google Sheet: " + failed.join(", ") + ". Saved info is shown instead. Check the tab names and that sharing is “Anyone with the link — Viewer”." : "";
+  return {rows, note};
+}
+
+/* ---- gallery ---- */
+/* Preview sources, tried in order until one gives a real image */
+function sources(u){
+  const e=encodeURIComponent(u), l=[];
+  if(/\/render\/image\/display\//.test(u)) l.push(u);            // render links may be the picture itself
+  l.push("https://image.thum.io/get/width/800/crop/500/"+u,
+         "https://api.microlink.io/?url="+e+"&screenshot=true&meta=false&embed=screenshot.url",
+         "https://s.wordpress.com/mshots/v1/"+e+"?w=800&h=500");
+  return l;
+}
+function nx(img){ const k=+img.dataset.k+1, l=sources(img.dataset.u); if(k<l.length){ img.dataset.k=k; img.src=l[k]; } else img.remove(); }
+function chk(img){ if(img.naturalWidth<60) nx(img); }
+function thumb(p){
+  const link = safeUrl(p.link);
+  const img = link ? '<img loading="lazy" referrerpolicy="no-referrer" alt="Preview of ' + esc(p.name) + '" data-u="' + esc(link) + '" data-k="0" src="' + esc(sources(link)[0]) + '" onerror="nx(this)" onload="chk(this)">' : "";
+  return '<div class="thumb"><div class="ph">' + esc(p.name.charAt(0).toUpperCase()) + '</div>' + img + '</div>';
+}
+function metaLine(p){ const bits = [p.place, p.updated ? "Updated " + p.updated : ""].filter(Boolean); return bits.length ? '<div class="loc">' + esc(bits.join(" · ")) + '</div>' : ""; }
+function render(){
+  $("#grid").innerHTML = projects.map((p,i) =>
+    '<button class="card" data-i="' + i + '">' + thumb(p) + '<div class="meta"><h3>' + esc(p.name) + '</h3><p>' + esc(p.details) + '</p>' + metaLine(p) + (p.category ? '<span class="tag">' + esc(p.category) + '</span>' : "") + '</div></button>').join("");
+  document.querySelectorAll(".card").forEach(b => b.onclick = () => openModal(+b.dataset.i));
+}
+let lastFocus;
+function openModal(i){
+  const p = projects[i], link = safeUrl(p.link), file = safeUrl(p.file);
+  $("#sheet").innerHTML = thumb(p) + '<div class="body"><h2>' + esc(p.name) + '</h2>' + (p.category ? '<span class="tag">' + esc(p.category) + '</span>' : "") +
+    '<p>' + esc(p.details) + '</p>' + metaLine(p) +
+    (link ? '<a class="btn" href="' + esc(link) + '" target="_blank" rel="noopener">Open project</a>' : "") +
+    (file ? '<a class="btn alt" href="' + esc(file) + '" target="_blank" rel="noopener">View attached file</a>' : "") +
+    '<button class="btn alt" id="closeM">Close</button></div>';
+  $("#closeM").onclick = closeModal;
+  lastFocus = document.activeElement; $("#modal").classList.add("on"); $("#closeM").focus();
+}
+function closeModal(){ if(!$("#modal").classList.contains("on")) return; $("#modal").classList.remove("on"); lastFocus && lastFocus.focus(); }
+$("#modal").onclick = e => { if(e.target.id==="modal") closeModal(); };
+
+buildHeader(); route();
+loadAll().catch(() => ({rows: SNAPSHOT, note: "Couldn't reach your Google Sheet, so saved info is shown."})).then(({rows,note}) => {
+  projects = rows; buildHeader(); renderInfo(); render(); route();
+  if(note) console.warn(note);
+});
+</script>
+</body>
+</html>
